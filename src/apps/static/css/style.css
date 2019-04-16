@@ -113,3 +113,33 @@
     text-transform: uppercase;
     text-decoration: none;
 }
+
+.login_form {
+    width: 50%;
+    margin: 100px auto;
+    text-align: center;
+}
+
+.login_form form input {
+    width: 200px;
+    margin: 10px;
+    border: 2px solid #292828;
+    border-radius: 3px;
+    background-color: white;
+    padding: 3px 10px;
+    font-size: 12px;
+    outline: none;
+}
+
+
+.login_form form button {
+    padding: 3px 20px;
+    background-color: #292828;
+    color: white;
+    border: 2px solid #292828;
+    border-radius: 3px;
+    outline: none;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
