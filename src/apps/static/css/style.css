@@ -8,8 +8,11 @@
 
 .main_container {
     width: 30%;
-    margin: 50px auto;
     text-align: center;
+    padding: 10px;
+    position: fixed;
+    top: 50px;
+    left: 50px;
 }
 
 
@@ -168,6 +171,73 @@
     font-weight: bold;
     text-transform: uppercase;
     outline: none;
+    padding: 3px 20px;
+    cursor: pointer;
+}
+
+.list_room {
+    width: 40%;
+    margin-top: 50px;
+    margin-left: 600px;
+    padding: 10px;
+}
+
+.list_room  .create_user {
+    font-weight: bold;
+    font-size: 12px;
+    color: #292828;
+}
+
+.view_room_in_main {
+    /* border: 2px solid #292828; */
+    padding: 5px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    /* text-align: center; */
+}
+
+.list_room .create_user a {
+    font-size: 16px;
+    text-decoration: none;
+    color: #46b7e8;
+}
+
+.list_room .count_participants_title {
+    font-size: 10px;
+    color: #292828;
+}
+
+
+.count_participants {
+    font-size: 10px;
+    color: #46b7e8;
+    font-weight: bold;
+}
+
+
+.form_create {
+    width: 100%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.form_create form input {
+    width: 200px;
+    border: 2px solid #292828;
+    border-radius: 3px;
+    outline: none;
+    padding: 3px 10px;
+    margin: 10px;
+}
+
+.form_create form button {
+    border: 2px solid #292828;
+    background-color: #292828;
+    color: white;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
     padding: 3px 20px;
     cursor: pointer;
 }

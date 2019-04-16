@@ -1,0 +1,11 @@
+<div class="list_room">
+
+    {% for ob in object_list %}
+        <div class='view_room_in_main'>
+            <p class='create_user'>create by: {{ob.founder.username}} <a href="">{{ob.name}}</a> at : <span>{{ob.create_date}}</span></p>
+            <p class='count_participants_title'> users in room : <span class='count_participants'>{{ob.participants.count}}</span></p>
+        </div>
+
+    {% endfor %}
+
+</div>

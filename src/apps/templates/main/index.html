@@ -3,6 +3,9 @@
 
 {% block content %}
 
+    {% include 'list_room.html' %}
+
+
     <div class="main_container">
 
         <img src="{% static './assets/anonymous-logo.png' %}" />
@@ -19,7 +22,7 @@
             </div>
 
             <div class="create_room">
-                <a href="">create room</a>
+                <a href="{% url 'main:room:create_new_room' %}">create room</a>
             </div>
 
         {% else %}
