@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="main_container">
+
+        {% if user.is_authenticated %}
+            {% include 'logout.html' %}
+            <h3 class='is_user'>Hi, <span>{{user.username}}.</span> How are you ?</h3>
+            <p class='text-p'> Find a chat in which you are waiting or create and call friends. </p>
+
+            <div class="search_room">
+                <form>
+                    <input type="text" name="" placeholder="Search room ..." value="">
+                </form>
+            </div>
+
+            <div class="create_room">
+                <a href="">create room</a>
+            </div>
+
+        {% else %}
+            <h3 id='user_is_not'></h3>
+            <div class="login_or_register">
+                <a href="">login</a>
+                <a href="">register</a>
+            </div>
+        {% endif %}
+
+    </div>
+<script src="{% static './js/text.js' %}"></script>
+{% endblock %}
