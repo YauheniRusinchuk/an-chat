@@ -241,3 +241,36 @@
     padding: 3px 20px;
     cursor: pointer;
 }
+
+.room_detail {
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+}
+
+
+.room_detail h3 {
+    color: grey;
+    font-size: 12px;
+}
+
+.room_detail .hi {
+    color: #46b7e8;
+    font-size: 16px;
+}
+
+.room_detail .name_room {
+    color: #46b7e8;
+    font-size: 16px;
+}
+
+
+.room_detail p {
+    font-weight: bold;
+    color: #292828;
+}
+
+.room_detail p .creator {
+    color: #46b7e8;
+    font-size: 14px;
+}

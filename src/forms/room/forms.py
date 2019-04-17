@@ -3,7 +3,7 @@ from src.models.room.models import Room
 
 class FormRoom(forms.ModelForm):
 
-    password = forms.CharField(label="Password room",widget=forms.PasswordInput(
+    password = forms.CharField(widget=forms.PasswordInput(
              attrs={'placeholder': 'password ...'}
     ))
 
@@ -13,6 +13,8 @@ class FormRoom(forms.ModelForm):
             'name',
             'password',
         ]
+
+
 
     # name     = forms.CharField()
     #
