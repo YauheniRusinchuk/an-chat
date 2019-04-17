@@ -1,4 +1,7 @@
+{% load static %}
 <div class="list_room">
+
+    {% if user.is_authenticated %}
 
     {% for ob in object_list %}
         <div class='view_room_in_main'>
@@ -7,5 +10,11 @@
         </div>
 
     {% endfor %}
+    {% else %}
+        <div class='not_auth_container'>
+            <p class='not_auth'>You must be logged in to see the list of rooms.</p>
+            <img src="{% static './assets/sad.png' %}" />
+        </div>
+    {% endif %}
 
 </div>

@@ -175,6 +175,17 @@
     cursor: pointer;
 }
 
+.not_auth_container {
+    text-align: center;
+}
+
+
+.not_auth_container .not_auth {
+    font-weight: bold;
+    color: #292828;
+}
+
+
 .list_room {
     width: 40%;
     margin-top: 50px;
