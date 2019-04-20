@@ -1,5 +1,6 @@
 from django.views.generic.edit import CreateView, DeleteView
 from django.views import View
+from django.http import Http404
 from django.urls import reverse_lazy
 from django.shortcuts import render, redirect, reverse
 from src.forms.room.forms import FormRoom
@@ -12,6 +13,14 @@ class DeleteRoom(DeleteView):
     model           = Room
     template_name   = 'room/delete.html'
     success_url     = reverse_lazy('main:main_page')
+
+
+    def get_object(self, queryset=None):
+        obj = super(DeleteRoom, self).get_object(queryset=queryset)
+        if obj.founder != self.request.user:
+            raise Http404
+        return obj
+
 
 
 class CreateRoom(CreateView):

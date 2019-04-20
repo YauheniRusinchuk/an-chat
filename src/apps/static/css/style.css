@@ -297,3 +297,13 @@
     color: #46b7e8;
     font-size: 14px;
 }
+
+.check_password {
+    width: 50%;
+    margin: 50px auto;
+}
+
+.delete_container {
+    width: 50%;
+    margin: 50px auto;
+}
