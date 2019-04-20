@@ -17,6 +17,9 @@ class Room(models.Model):
         slug = slugify(self.name)
         return reverse('main:room:detail_room', kwargs={'slug': slug, 'pk': self.pk})
 
+    def get_delete_room(self):
+        slug = slugify(self.name)
+        return reverse('main:room:delete_room', kwargs={'slug': slug, 'pk': self.pk})
 
 
     def __str__(self):

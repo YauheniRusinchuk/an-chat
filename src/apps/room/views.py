@@ -1,10 +1,17 @@
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, DeleteView
 from django.views import View
+from django.urls import reverse_lazy
 from django.shortcuts import render, redirect, reverse
 from src.forms.room.forms import FormRoom
 from src.models.room.models import Room
 from django.utils.text import slugify
 from django.contrib.auth.hashers import check_password
+
+
+class DeleteRoom(DeleteView):
+    model           = Room
+    template_name   = 'room/delete.html'
+    success_url     = reverse_lazy('main:main_page')
 
 
 class CreateRoom(CreateView):
