@@ -301,9 +301,61 @@
 .check_password {
     width: 50%;
     margin: 50px auto;
+    text-align: center;
 }
+
+.check_password form input {
+    border: 2px solid #292828;
+    border-radius: 3px;
+    padding: 3px 10px;
+    outline: none;
+}
+
+.check_password form button {
+    border: 2px solid #292828;
+    background-color: #292828;
+    color: white;
+    border-radius: 3px;
+    outline: none;
+    padding: 3px 20px;
+    font-weight: bold;
+}
+
+
 
 .delete_container {
     width: 50%;
     margin: 50px auto;
+}
+
+.btn_delete {
+    font-size: 12px;
+    font-weight: bold;
+    color: #292828;
+    text-decoration: none;
+}
+
+.chat_container {
+    padding: 10px;
+    width: 50%;
+    height: 400px;
+    margin: 50px auto;
+    border-radius: 3px;
+    box-shadow: 0 0 20px #e6e6e6;
+    overflow-y: scroll;
+}
+
+
+.chat_item {
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+
+.name_user {
+    font-size: 16px;
+    color: #46b7e8;
+    font-weight: bold;
 }

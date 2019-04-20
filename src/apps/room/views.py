@@ -38,6 +38,10 @@ class CreateRoom(CreateView):
 class CheckPassowrd(View):
 
     def get(self, request, *args, **kwargs):
+        room = Room.objects.get(pk=kwargs.get('pk'))
+        slug        = slugify(room.name)
+        if request.user in room.participants.all():
+            return redirect(reverse('main:room:detail_room', kwargs={'slug': slug, 'pk': room.pk}))
         return render(request, 'room/check_password.html', {})
 
     def post(self, request, *args, **kwargs):
