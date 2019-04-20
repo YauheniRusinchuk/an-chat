@@ -18,6 +18,10 @@ class Room(models.Model):
         return reverse('main:room:detail_room', kwargs={'slug': slug, 'pk': self.pk})
 
 
+    def get_check_password(self):
+        slug = slugify(self.name)
+        return reverse('main:room:checkpassword', kwargs={'slug': slug, 'pk': self.pk})
+
     def __str__(self):
         return f"Комната {self.name}"
 
