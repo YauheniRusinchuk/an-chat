@@ -5,6 +5,15 @@
     font-family: 'Mina', sans-serif;
 }
 
+button {
+    outline: none;
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+}
+
 
 .main_container {
     width: 30%;
@@ -206,7 +215,6 @@
     border-radius: 3px;
     margin-bottom: 20px;
     text-align: center;
-    box-shadow: 0 0 30px #e6e6e6;
     position: relative;
 }
 

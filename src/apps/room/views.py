@@ -30,7 +30,6 @@ class CreateRoom(CreateView):
 
     def form_valid(self, form):
         form.instance.founder   = self.request.user
-        print(form.cleaned_data)
         return super().form_valid(form)
 
 
