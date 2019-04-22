@@ -403,6 +403,7 @@ input {
     border-radius: 10px;
     font-size: 14px;
     border: 1px solid #e6e6e6;
+    box-shadow: 0 0 5px grey;
 }
 
 
