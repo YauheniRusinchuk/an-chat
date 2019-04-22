@@ -399,9 +399,10 @@ input {
     width: 80%;
     padding: 15px;
     margin: 5px 10px 0;
-    background-color: #f7f7f7;
+    /* background-color: #f7f7f7; */
     border-radius: 10px;
     font-size: 14px;
+    border: 1px solid #e6e6e6;
 }
 
 
