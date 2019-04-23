@@ -29,10 +29,33 @@
 
         <div class="chat_form">
             <input type="text" name="" placeholder="Text ..." value="">
-            <button type="subit" name="button">Submit</button>
+            <button type="subit" name="button">NEW</button>
         </div>
 
 
     </div>
+
+
+<script type="text/javascript">
+
+
+    let loc = window.location;
+    let wsStart = 'ws://';
+    if(loc.protocol == 'https:') {
+        wsStart = 'wss://';
+    }
+    let endPoint = wsStart + loc.host + loc.pathname
+    let wsMsg = new WebSocket(endPoint);
+    wsMsg.onopen = function(e) {
+        console.log("OpenMSG", e)
+    }
+
+
+
+</script>
+
+
+
+
 
 {% endblock %}
