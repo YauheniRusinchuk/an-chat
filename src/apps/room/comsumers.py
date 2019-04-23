@@ -1,4 +1,5 @@
 from channels.consumer import AsyncConsumer
+from channels.generic.websocket import AsyncWebsocketConsumer
 
 
 class CommentCunsumer(AsyncConsumer):
@@ -10,7 +11,7 @@ class CommentCunsumer(AsyncConsumer):
         print("SOCKET MSG ...")
 
     async def websocket_receive(self, event):
-        print('receive ...')
+        print('receive ...', event)
 
     async def websocket_disconnect(self, event):
         print("disconnect")

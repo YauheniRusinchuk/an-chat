@@ -28,8 +28,10 @@
         </div>
 
         <div class="chat_form">
-            <input type="text" name="" placeholder="Text ..." value="">
-            <button type="subit" name="button">NEW</button>
+            <form id='form_comment'>
+                <input id='msg_form' type="text" name="" placeholder="Text ..." value="">
+                <button type="subit" name="button">NEW</button>
+            </form>
         </div>
 
 
@@ -49,6 +51,19 @@
     wsMsg.onopen = function(e) {
         console.log("OpenMSG", e)
     }
+
+
+
+    $('#form_comment').on('submit', (e)=> {
+        e.preventDefault();
+        let text = $('.msg_form').val();
+        let data = {
+             'message': text
+        }
+        wsMsg.send(JSON.stringify(data))
+        $('#form_comment')[0].reset();
+        })
+
 
 
 
